@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Math">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Sound">
+      <UniqueIdentifier>{f851447c-29ca-4d36-9afc-d931ad879c3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{ad6303e4-e1e0-4afb-847e-5c62bfcec588}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{d6654934-b1f0-4208-bf44-343ab59caf14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{b23cdc77-98a2-437e-961f-c991b790ef0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parsing">
+      <UniqueIdentifier>{af6aae39-f530-401f-85c4-b2775621200a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parsing\TinyXML">
+      <UniqueIdentifier>{b465e9b1-8537-466a-8398-269683a9d7e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physic">
+      <UniqueIdentifier>{7b99bcfb-3f30-4d00-905e-b2abd3d2415d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parsing\ObjLoader">
+      <UniqueIdentifier>{6658626c-1634-4381-98ea-8ea48374863d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parsing\BufferParser">
+      <UniqueIdentifier>{1d65be54-9bbe-4179-b6f8-aa2f26d32987}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parsing\FileSystem">
+      <UniqueIdentifier>{ef18dd88-4612-4b56-9677-49da8c60e3c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Commandlet">
+      <UniqueIdentifier>{ea05b13b-c5ba-467f-9661-28ab030e0af1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parsing\ZipUtils">
+      <UniqueIdentifier>{aa9f4e9e-7541-4bad-a466-b276004d4ad7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Memory">
+      <UniqueIdentifier>{a6bded3d-6884-45b9-8c6c-8433b7e4b239}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network">
+      <UniqueIdentifier>{1521ab5b-55b4-4082-8e5d-186127bf93c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\WebSocket">
+      <UniqueIdentifier>{1b8e8b27-3397-489d-b2ae-a2099449180a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parsing\JpegCompressor">
+      <UniqueIdentifier>{ae98dd32-d666-4bdc-9715-4df3adef34e9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Math\GeneralStruct.hpp">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Vec2.hpp">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Vec3.hpp">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Time.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Camera3D.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\DebugDrawShapes.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\DeveloperConsole.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\VertexStruct.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\XBoxController.hpp">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Matrix4.hpp">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Physic\ParticleSystem.hpp">
+      <Filter>Physic</Filter>
+    </ClInclude>
+    <ClInclude Include="Physic\ParticleUpdateFunctions.hpp">
+      <Filter>Physic</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\glext.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Material.hpp">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\OpenGLRenderer.hpp">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\OpenGLShader.hpp">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Sprites.hpp">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Texture.hpp">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\BitmapFont.hpp">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\InputSystem.hpp">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Parsing\ObjLoader\ObjLoader.hpp">
+      <Filter>Parsing\ObjLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="Parsing\TinyXML\tinystr.h">
+      <Filter>Parsing\TinyXML</Filter>
+    </ClInclude>
+    <ClInclude Include="Parsing\TinyXML\tinyxml.h">
+      <Filter>Parsing\TinyXML</Filter>
+    </ClInclude>
+    <ClInclude Include="Parsing\BufferParser\BufferParser.hpp">
+      <Filter>Parsing\BufferParser</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\HenryFunctions.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Parsing\FileSystem\FileSystem.hpp">
+      <Filter>Parsing\FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Parsing\TinyXML\TinyXMLHelper.hpp">
+      <Filter>Parsing\TinyXML</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Clock.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Profiling.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Commandlet\Commandlet.hpp">
+      <Filter>Commandlet</Filter>
+    </ClInclude>
+    <ClInclude Include="Commandlet\CommandletRegistration.hpp">
+      <Filter>Commandlet</Filter>
+    </ClInclude>
+    <ClInclude Include="Parsing\ZipUtils\unzip.h">
+      <Filter>Parsing\ZipUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="Parsing\ZipUtils\zip.h">
+      <Filter>Parsing\ZipUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="Parsing\ZipUtils\ZipHelper.hpp">
+      <Filter>Parsing\ZipUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory\MemoryAllocatePool.hpp">
+      <Filter>Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\NetworkingSystem.hpp">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\PacketHeader.hpp">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\WebSocket\client.hpp">
+      <Filter>Network\WebSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\WebSocket\close.hpp">
+      <Filter>Network\WebSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\WebSocket\connection.hpp">
+      <Filter>Network\WebSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\WebSocket\connection_base.hpp">
+      <Filter>Network\WebSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\WebSocket\endpoint.hpp">
+      <Filter>Network\WebSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\WebSocket\endpoint_base.hpp">
+      <Filter>Network\WebSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\WebSocket\error.hpp">
+      <Filter>Network\WebSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\WebSocket\frame.hpp">
+      <Filter>Network\WebSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\WebSocket\server.hpp">
+      <Filter>Network\WebSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\WebSocket\uri.hpp">
+      <Filter>Network\WebSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\WebSocket\utf8_validator.hpp">
+      <Filter>Network\WebSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\WebSocket\utilities.hpp">
+      <Filter>Network\WebSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\WebSocket\version.hpp">
+      <Filter>Network\WebSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\asio.hpp">
+      <Filter>Network\WebSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\SpritesAnimateSystem.hpp">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Billboard.hpp">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Parsing\JpegCompressor\jpgd.h">
+      <Filter>Parsing\JpegCompressor</Filter>
+    </ClInclude>
+    <ClInclude Include="Parsing\JpegCompressor\jpge.h">
+      <Filter>Parsing\JpegCompressor</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Quaternion.hpp">
+      <Filter>Math</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Core\Time.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Camera3D.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\DebugDrawShapes.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\DeveloperConsole.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Input\XBoxController.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Matrix4.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Physic\ParticleSystem.cpp">
+      <Filter>Physic</Filter>
+    </ClCompile>
+    <ClCompile Include="Physic\ParticleUpdateFunctions.cpp">
+      <Filter>Physic</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\Material.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\OpenglRenderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\OpenGLShader.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\Sprites.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\stb_image.c">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\Texture.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\BitmapFont.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Input\InputSystem.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Parsing\ObjLoader\ObjLoader.cpp">
+      <Filter>Parsing\ObjLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="Parsing\TinyXML\tinystr.cpp">
+      <Filter>Parsing\TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="Parsing\TinyXML\tinyxml.cpp">
+      <Filter>Parsing\TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="Parsing\TinyXML\tinyxmlerror.cpp">
+      <Filter>Parsing\TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="Parsing\TinyXML\tinyxmlparser.cpp">
+      <Filter>Parsing\TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="Parsing\BufferParser\BufferParser.cpp">
+      <Filter>Parsing\BufferParser</Filter>
+    </ClCompile>
+    <ClCompile Include="Parsing\FileSystem\FileSystem.cpp">
+      <Filter>Parsing\FileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Parsing\TinyXML\TinyXMLHelper.cpp">
+      <Filter>Parsing\TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\HenryFunctions.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Clock.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Profiling.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Commandlet\Commandlet.cpp">
+      <Filter>Commandlet</Filter>
+    </ClCompile>
+    <ClCompile Include="Commandlet\CommandletRegistration.cpp">
+      <Filter>Commandlet</Filter>
+    </ClCompile>
+    <ClCompile Include="Parsing\ZipUtils\unzip.cpp">
+      <Filter>Parsing\ZipUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="Parsing\ZipUtils\zip.cpp">
+      <Filter>Parsing\ZipUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="Parsing\ZipUtils\ZipHelper.cpp">
+      <Filter>Parsing\ZipUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory\MemoryAllocatePool.cpp">
+      <Filter>Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\NetworkingSystem.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\Billboard.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Parsing\JpegCompressor\jpgd.cpp">
+      <Filter>Parsing\JpegCompressor</Filter>
+    </ClCompile>
+    <ClCompile Include="Parsing\JpegCompressor\jpge.cpp">
+      <Filter>Parsing\JpegCompressor</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Quaternion.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

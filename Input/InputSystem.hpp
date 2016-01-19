@@ -1,0 +1,228 @@
+#pragma once
+
+#ifndef INPUTSYSTEM_HPP 
+#define INPUTSYSTEM_HPP
+
+#include "Engine\Math\Vec2.hpp"
+
+#include <vector>
+
+namespace Henry
+{
+
+struct Inputs
+{
+	enum MouseKeys
+	{
+		MOUSE_LB,
+		MOUSE_RB,
+		MOUSE_WHEEL
+	};
+
+	enum Keys
+	{
+		INPUT_LBUTTON = 0x01,
+		INPUT_RBUTTON,
+		INPUT_CANCEL,
+		INPUT_MBUTTON,
+		INPUT_XBUTTON1,
+		INPUT_XBUTTON2,
+		INPUT_BACK = 0x08,
+		INPUT_TAB,
+		INPUT_CLEAR = 0x0C,
+		INPUT_RETURN,
+		INPUT_SHIFT = 0x10,
+		INPUT_CONTROL,
+		INPUT_MENU,
+		INPUT_PAUSE,
+		INPUT_CAPITAL,
+		INPUT_KANA,
+		INPUT_HANGEUL,
+		INPUT_HANGUL,
+		INPUT_JUNJA,
+		INPUT_FINAL,
+		INPUT_HANJA,
+		INPUT_KANJI,
+		INPUT_ESCAPE = 0x1B,
+		INPUT_CONVERT,
+		INPUT_NONCONVERT,
+		INPUT_ACCEPT,
+		INPUT_MODECHANGE,
+		INPUT_SPACE,
+		INPUT_PRIOR,
+		INPUT_NEXT,
+		INPUT_END,
+		INPUT_HOME,
+		INPUT_LEFT,
+		INPUT_UP,
+		INPUT_RIGHT,
+		INPUT_DOWN,
+		INPUT_SELECT,
+		INPUT_PRINT,
+		INPUT_EXECUTE,
+		INPUT_SNAPSHOT,
+		INPUT_INSERT,
+		INPUT_DELETE,
+		INPUT_HELP,
+		INPUT_LWIN = 0x5B,
+		INPUT_RWIN,
+		INPUT_APPS,
+		INPUT_SLEEP = 0x5F,
+		INPUT_NUMPAD0,
+		INPUT_NUMPAD1,
+		INPUT_NUMPAD2,
+		INPUT_NUMPAD3,
+		INPUT_NUMPAD4,
+		INPUT_NUMPAD5,
+		INPUT_NUMPAD6,
+		INPUT_NUMPAD7,
+		INPUT_NUMPAD8,
+		INPUT_NUMPAD9,
+		INPUT_MULTIPLY,
+		INPUT_ADD,
+		INPUT_SEPARATOR,
+		INPUT_SUBTRACT,
+		INPUT_DECIMAL,
+		INPUT_DIVIDE,
+		INPUT_F1,
+		INPUT_F2,
+		INPUT_F3,
+		INPUT_F4,
+		INPUT_F5,
+		INPUT_F6,
+		INPUT_F7,
+		INPUT_F8,
+		INPUT_F9,
+		INPUT_F10,
+		INPUT_F11,
+		INPUT_F12,
+		INPUT_F13,
+		INPUT_F14,
+		INPUT_F15,
+		INPUT_F16,
+		INPUT_F17,
+		INPUT_F18,
+		INPUT_F19,
+		INPUT_F20,
+		INPUT_F21,
+		INPUT_F22,
+		INPUT_F23,
+		INPUT_F24,
+		INPUT_NUMLOCK = 0x90,
+		INPUT_SCROLL,
+		INPUT_OEM_NEC_EQUAL = 0x92,
+		INPUT_OEM_FJ_JISHO = 0x92,
+		INPUT_OEM_FJ_MASSHOU,
+		INPUT_OEM_FJ_TOUROKU,
+		INPUT_OEM_FJ_LOYA,
+		INPUT_OEM_FJ_ROYA,
+		INPUT_LSHIFT = 0xA0,
+		INPUT_RSHIFT,
+		INPUT_LCONTROL,
+		INPUT_RCONTROL,
+		INPUT_LMENU,
+		INPUT_RMENU,
+		INPUT_BROWSER_BACK,
+		INPUT_BROWSER_FORWARD,
+		INPUT_BROWSER_REFRESH,
+		INPUT_BROWSER_STOP, 
+		INPUT_BROWSER_SEARCH,
+		INPUT_BROWSER_FAVORITES,
+		INPUT_BROWSER_HOME,
+		INPUT_VOLUME_MUTE,
+		INPUT_VOLUME_DOWN,
+		INPUT_VOLUME_UP,
+		INPUT_MEDIA_NEXT_TRACK,
+		INPUT_MEDIA_PREV_TRACK,
+		INPUT_MEDIA_STOP,
+		INPUT_MEDIA_PLAY_PAUSE,
+		INPUT_LAUNCH_MAIL,
+		INPUT_LAUNCH_MEDIA_SELECT,
+		INPUT_LAUNCH_APP1,
+		INPUT_LAUNCH_APP2,
+		INPUT_OEM_1 = 0xBA,
+		INPUT_OEM_PLUS,
+		INPUT_OEM_COMMA,
+		INPUT_OEM_MINUS,
+		INPUT_OEM_PERIOD,
+		INPUT_OEM_2,
+		INPUT_OEM_3,
+		INPUT_OEM_4,
+		INPUT_OEM_5,
+		INPUT_OEM_6,
+		INPUT_OEM_7,
+		INPUT_OEM_8,
+		INPUT_OEM_AX,
+		INPUT_OEM_102,
+		INPUT_ICO_HELP,
+		INPUT_ICO_00,
+		INPUT_PROCESSKEY,
+		INPUT_ICO_CLEAR,
+		INPUT_PACKET,
+		INPUT_OEM_RESET,
+		INPUT_OEM_JUMP,
+		INPUT_OEM_PA1,
+		INPUT_OEM_PA2,
+		INPUT_OEM_PA3,
+		INPUT_OEM_WSCTRL,
+		INPUT_OEM_CUSEL,
+		INPUT_OEM_ATTN,
+		INPUT_OEM_FINISH,
+		INPUT_OEM_COPY,
+		INPUT_OEM_AUTO,
+		INPUT_OEM_ENLW,
+		INPUT_OEM_BACKTAB,
+		INPUT_ATTN,
+		INPUT_CRSEL,
+		INPUT_EXSEL,
+		INPUT_EREOF,
+		INPUT_PLAY,
+		INPUT_ZOOM,
+		INPUT_NONAME,
+		INPUT_PA1,
+		INPUT_OEM_CLEAR,
+		INPUT_EXIT_SYSTEM = 0xFF
+	};
+};
+
+struct keyState
+{
+	bool isPressedFrame;
+	bool isHold;
+	bool isReleasedFrame;
+};
+
+
+class InputSystem
+{
+public:
+	InputSystem(void* platformHandle);
+	~InputSystem(void);
+	void Update();
+	bool PressedOnce(const unsigned char keyValue);
+	void GetMousePosition(Vec2f* position);
+	void ToggleCursorDisplay(bool visible);
+	void CenterMouseCursor();
+	Vec2i GetMouseMovementFromLastFrame();
+
+	keyState m_keyState[256];
+	keyState m_mouseState[3];
+	bool m_isFocus;
+	std::vector<char> m_chars;
+	int m_mouseWheelValue;
+	
+private:
+	void RunMessagePump();
+	void* m_platformHandle;
+	Vec2i m_centerPoint;
+	Vec2i m_windowSize;
+	std::vector<char> m_empty;
+	bool m_showCursor;
+	//std::vector<char> m_keyPressedThisFrame;
+};
+
+extern InputSystem* _inputSystem;
+
+};
+
+#endif
